@@ -52,6 +52,8 @@ public class SendFragment extends Fragment {
 
     ProgressBarDialog progressBarDialog;
 
+    //TODO: Fix WalletDisconnectedException bug while sending
+
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
