@@ -1,0 +1,82 @@
+plugins {
+    alias(libs.plugins.androidApplication)
+    alias(libs.plugins.kotlinAndroid)
+}
+
+android {
+    namespace 'com.app.nexawallet'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.app.nexawallet"
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.constraintlayout
+    testImplementation libs.junit
+    androidTestImplementation libs.androidx.test.ext.junit
+    androidTestImplementation libs.espresso.core
+
+    implementation "com.airbnb.android:lottie:5.2.0"
+    
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
+
+    //Volley
+    implementation 'com.android.volley:volley:1.2.1'
+
+    //SwipeRefreshLayout
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01"
+
+    //QRCode
+    implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
+
+    //BCH Nexa Lib
+    implementation 'info.bitcoinunlimited:libbitcoincash:3.2.6'
+
+    //Room DB
+    def room_version = "2.6.0"
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+
+    //Currency Edittext
+    implementation 'com.cottacush:CurrencyEditText:1.0.0'
+
+    //Splash screen
+    implementation 'androidx.core:core-splashscreen:1.0.1'
+
+    //Shimmer
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
+
+
+
+
+}

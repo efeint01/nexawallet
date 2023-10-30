@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".dialogs.BottomSheetCopiedFragment">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="100dp"
+        app:lottie_rawRes="@raw/tick_anim"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="false"
+        android:layout_height="100dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:fontFamily="@font/medium"
+        android:layout_marginTop="5dp"
+        android:textSize="33sp"
+        android:textColor="?android:textColorPrimary"
+        android:layout_height="wrap_content"
+        android:text="@string/copied"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/regular"
+        android:text="@string/your_wallet_address"/>
+
+    <TextView
+        android:id="@+id/walletAddressTw"
+        android:fontFamily="@font/semibold"
+        android:layout_width="wrap_content"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/doneBtn"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="30dp"
+        android:text="@string/done"
+        style="@style/ButtonOutlinedRoundedStyle"
+        android:layout_height="wrap_content"/>
+
+
+    <Button
+        android:id="@+id/shareBtn"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="30dp"
+        android:text="@string/share"
+        style="@style/ButtonRoundedStyle"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

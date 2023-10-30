@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/setupWalletLy"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SetupWalletActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:layout_width="225dp"
+            android:layout_height="225dp"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/light_extra"
+            android:gravity="center"
+            android:letterSpacing="0.5"
+            android:text="@string/coin_symbol"
+            android:textAllCaps="true"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="35sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/medium"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/welcome_desc"
+            android:textColor="?android:textColorPrimary" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/versionTw"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <Button
+            android:id="@+id/createWalletBtn"
+            style="@style/ButtonRoundedStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/create_wallet" />
+
+        <Button
+            android:id="@+id/restoreWalletBtn"
+            style="@style/ButtonOutlinedRoundedStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/recover_wallet" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/versionTw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/medium"
+        android:text="Mainnet v1.0"
+        android:textColor="?android:textColorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/triangle_gristen_anim" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

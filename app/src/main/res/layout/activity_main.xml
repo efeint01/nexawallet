@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefreshLy"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainLy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/medium"
+            android:text="@string/app_name"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/baseline_notifications_none_24"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView"
+            app:tint="?android:textColorPrimary" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardBackgroundColor="@color/black"
+            app:cardCornerRadius="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:strokeWidth="0dp">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/walletAddressTw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:drawableEndCompat="@drawable/round_content_copy_24"
+                    app:drawableTint="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="NEXA:0x00219...5Fa" />
+
+                <TextView
+                    android:id="@+id/balanceVisibilityTw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/semibold"
+                    android:text="@string/my_balance"
+                    android:textColor="@color/white"
+                    android:textSize="26sp"
+                    app:drawableEndCompat="@drawable/round_visibility_24"
+                    app:drawableTint="@color/white"
+                    app:layout_constraintStart_toStartOf="@+id/walletAddressTw"
+                    app:layout_constraintTop_toBottomOf="@+id/walletAddressTw" />
+
+                <TextView
+                    android:id="@+id/balanceTw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/semibold"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/white"
+                    android:textSize="36sp"
+                    app:layout_constraintStart_toStartOf="@+id/balanceVisibilityTw"
+                    app:layout_constraintTop_toBottomOf="@+id/balanceVisibilityTw"
+                    tools:text="0 NEXA" />
+
+                <TextView
+                    android:id="@+id/balanceEquityTw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/medium"
+                    android:includeFontPadding="false"
+                    android:text="$0"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="@+id/balanceTw"
+                    app:layout_constraintTop_toBottomOf="@+id/balanceTw" />
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/balanceTw"
+                    app:layout_constraintTop_toBottomOf="@+id/balanceEquityTw">
+
+                    <TextView
+                        android:id="@+id/balanceRateTw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/semibold"
+                        android:text="50%"
+                        android:textColor="#00E855"
+                        android:textSize="15sp"
+                        app:drawableStartCompat="@drawable/round_arrow_upward_24"
+                        app:drawableTint="#00E855" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="2dp"
+                        android:text="-"
+                        android:textColor="#00E855" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/light"
+                        android:text="Today"
+                        android:textColor="#00E855" />
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/logo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/materialCardView2"
+            app:layout_constraintStart_toStartOf="@+id/materialCardView2"
+            app:layout_constraintTop_toBottomOf="@+id/materialCardView2">
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/buyCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#FFBCBC"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintStart_toStartOf="@+id/materialCardView2"
+                app:layout_constraintTop_toBottomOf="@+id/materialCardView2"
+                app:strokeWidth="0dp">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/medium"
+                    android:gravity="center"
+                    android:paddingVertical="24dp"
+                    android:text="@string/buy"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    app:drawableTopCompat="@drawable/round_add_24" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="5dp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/sendCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#FFF2AF"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintStart_toStartOf="@+id/materialCardView2"
+                app:layout_constraintTop_toBottomOf="@+id/materialCardView2"
+                app:strokeWidth="0dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/medium"
+                    android:gravity="center"
+                    android:paddingVertical="24dp"
+                    android:text="@string/send"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    app:drawableTopCompat="@drawable/round_send_24" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="5dp" />
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/receiveCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#B4FFAF"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintStart_toStartOf="@+id/materialCardView2"
+                app:layout_constraintTop_toBottomOf="@+id/materialCardView2"
+                app:strokeWidth="0dp">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/medium"
+                    android:gravity="center"
+                    android:paddingVertical="24dp"
+                    android:text="@string/receive"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    app:drawableTopCompat="@drawable/round_call_received_24" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="5dp"
+                android:visibility="gone" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/swapCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone"
+                app:cardBackgroundColor="#BCEDFF"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintStart_toStartOf="@+id/materialCardView2"
+                app:layout_constraintTop_toBottomOf="@+id/materialCardView2"
+                app:strokeWidth="0dp">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/medium"
+                    android:gravity="center"
+                    android:paddingVertical="24dp"
+                    android:text="Swap"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    app:drawableTopCompat="@drawable/round_swap_horiz_24" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/medium"
+            android:text="@string/transactions"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="28sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/txHistoryRv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            tools:listitem="@layout/row_tx_history_item" />
+
+
+        <include
+            android:id="@+id/emptyView"
+            layout="@layout/view_empty"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

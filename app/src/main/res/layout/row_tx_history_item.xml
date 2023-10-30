@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/statusImg"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="10dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_gray_oval"
+        android:src="@drawable/round_arrow_upward_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="?android:textColorPrimary" />
+
+    <TextView
+        android:id="@+id/statusTw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/regular"
+        android:text="Sent"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="23sp"
+        app:layout_constraintStart_toEndOf="@+id/statusImg"
+        app:layout_constraintTop_toTopOf="@+id/statusImg" />
+
+    <TextView
+        android:id="@+id/dateTw"
+        android:layout_width="wrap_content"
+        android:fontFamily="@font/regular"
+        android:layout_height="wrap_content"
+        android:text="Oct 21, 2023"
+        app:layout_constraintStart_toStartOf="@+id/statusTw"
+        app:layout_constraintTop_toBottomOf="@+id/statusTw" />
+
+
+    <TextView
+        android:id="@+id/amountTw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/semibold"
+        android:text="1 NEXA"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/amountPriceTw"
+        android:fontFamily="@font/regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$1,96"
+        app:layout_constraintEnd_toEndOf="@+id/amountTw"
+        app:layout_constraintTop_toBottomOf="@+id/amountTw" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

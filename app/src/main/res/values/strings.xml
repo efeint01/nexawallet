@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Nexa Wallet</string>
+    <string name="coin_symbol">NEXA</string>
+    <string name="welcome_desc">A crypto foundation for the new economy</string>
+    <string name="create_wallet">Create Wallet</string>
+    <string name="recover_wallet">Recover Wallet</string>
+    <string name="buy_nexa">Buy Nexa</string>
+    <string name="buy_nexa_desc"><![CDATA[Buy Nexa Coins on supported popular DEXs & CEXs]]></string>
+    <string name="buy">Buy</string>
+    <string name="create_wallet_desc">Please grab a pen and paper and proceed to carefully record your wallet\'s secret recovery phrase in the designated order.</string>
+    <string name="create_wallet_disclaimer">Important Note: \'Not your keys, not your coins.\' Safeguard your mnemonic phrase for control and ownership of your crypto assets. Loss of the phrase may result in permanent loss of your funds.</string>
+    <string name="done">Done</string>
+    <string name="receive">Receive</string>
+    <string name="receive_nexa">Receive Nexa</string>
+    <string name="receive_nexa_desc">Scan the QR Code to receive NEXA or copy your wallet address</string>
+    <string name="copy_wallet_address">Copy Wallet Address</string>
+    <string name="recover_wallet_desc">Recover your wallet by using your secret recovery phrase</string>
+    <string name="send_nexa">Send Nexa</string>
+    <string name="send">Send</string>
+    <string name="send_nexa_desc">Share Nexa with your friends, family, and everyone!</string>
+    <string name="receive_address">Receive Address</string>
+    <string name="max">MAX</string>
+    <string name="slide_to_send">Slide to Send</string>
+    <string name="swap">Swap</string>
+    <string name="swap_nexa">Swap Nexa</string>
+    <string name="swap_nexa_desc">Convert Nexa to other cryptocurrencies, tokens easily</string>
+    <string name="slide_to_swap">Slide to Swap</string>
+
+    <string name="last_price">Last Price</string>
+    <string name="share">Share</string>
+    <string name="copied">Copied!</string>
+    <string name="your_wallet_address">Your Wallet Address</string>
+
+    <string name="my_balance">My Balance</string>
+    <string name="last_transactions">Last Transactions</string>
+    <string name="paste">Paste</string>
+    <string name="invalid_words">Invalid Words</string>
+    <string name="transactions">Transactions</string>
+    <string name="invalid_address">Invalid Address</string>
+    <string name="blockchains_doesnt_match">Blockchains doesn\'t match</string>
+    <string name="invalid_number">Invalid Number</string>
+    <string name="balance_exceed">Balance Exceed</string>
+    <string name="sent">Sent</string>
+    <string name="amount_is_below_network_minimum">Amount is below network minimum</string>
+    <string name="scan_qr_code">Scan a QR Code</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="pasted_from_clipboard">Pasted from clipboard</string>
+    <string name="no_app_can_handle_this_action">No app can handle this action</string>
+    <string name="share_via">Share via</string>
+    <string name="are_you_sure">Are you sure?</string>
+    <string name="secret_words_disclaimer">If you lose your secret words, you will lose your access to your wallet.</string>
+    <string name="open_on_explorer">Open on Explorer</string>
+    <string name="your_current_balance">Your current balance</string>
+    <string name="completed">Completed</string>
+
+
+</resources>

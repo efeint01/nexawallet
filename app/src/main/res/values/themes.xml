@@ -1,0 +1,137 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Nexawallet" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/primary</item>
+        <item name="colorSecondaryVariant">@color/primary</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <item name="bottomSheetDialogTheme">@style/CustomBottomSheetDialog</item>
+
+    </style>
+
+    <style name="Theme.Nexawallet" parent="Base.Theme.Nexawallet" />
+
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <!-- Set the splash screen background, animated icon, and animation duration. -->
+        <item name="windowSplashScreenBackground">@color/primary</item>
+        <!-- Use windowSplashScreenAnimatedIcon to add either a drawable or an
+             animated drawable. One of these is required. -->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/logo</item>
+        <!-- Required for animated icons -->
+        <item name="windowSplashScreenAnimationDuration">2000</item>
+        <!-- Set the theme of the Activity that directly follows your splash screen. -->
+        <!-- Required -->
+        <item name="postSplashScreenTheme">@style/Theme.Nexawallet</item>
+    </style>
+
+    <style name="ToolbarText">
+        <item name="android:fontFamily">@font/medium</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="CustomBottomSheetDialog" parent="@style/ThemeOverlay.Material3.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheet</item>
+    </style>
+
+    <style name="CustomBottomSheet" parent="Widget.Material3.BottomSheet">
+        <item name="shapeAppearanceOverlay">@style/CustomShapeAppearanceBottomSheetDialog</item>
+    </style>
+
+    <style name="CustomShapeAppearanceBottomSheetDialog" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">16dp</item>
+        <item name="cornerSizeTopLeft">16dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.Button.Rounded" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.Button.Oval" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">120dp</item>
+    </style>
+
+    <style name="ButtonRoundedStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:padding">20dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/medium</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:letterSpacing">0</item> <!-- Remove font spacing -->
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.Button.Rounded</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="ButtonOutlinedRoundedStyle" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:padding">20dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/medium</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:letterSpacing">0</item> <!-- Remove font spacing -->
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.Button.Rounded</item>
+        <item name="strokeColor">@color/primary</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="ButtonOvalStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:padding">20dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/medium</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:letterSpacing">0</item> <!-- Remove font spacing -->
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.Button.Oval</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="ButtonOutlinedOvalStyle" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:padding">20dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/medium</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:letterSpacing">0</item> <!-- Remove font spacing -->
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.Button.Oval</item>
+        <item name="strokeColor">@color/primary</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="ButtonTextStyle" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:padding">20dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/medium</item>
+        <item name="android:letterSpacing">0</item> <!-- Remove font spacing -->
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="RowSecretWordStyle" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/regular</item>
+        <item name="android:background">@drawable/bg_rounded_gray</item>
+        <item name="android:textSize">17sp</item>
+        <item name="singleLine">true</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:inputType">text</item>
+        <item name="hintTextColor">@color/hint</item>
+    </style>
+
+
+    <style name="ErrorTextView" parent="Widget.MaterialComponents.TextView">
+        <item name="fontFamily">@font/semibold</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+
+</resources>

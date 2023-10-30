@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".fragments.SendFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary"
+            app:navigationIcon="?homeAsUpIndicator"
+            app:navigationIconTint="@color/black"
+            app:title="@string/send"
+            app:titleTextAppearance="@style/ToolbarText" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/semibold"
+        android:padding="10dp"
+        android:text="@string/send_nexa"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/regular"
+        android:gravity="center"
+        android:text="@string/send_nexa_desc"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/sendBtnShimmer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_rounded_gray"
+            android:gravity="center"
+            android:padding="10dp">
+
+
+            <EditText
+                android:id="@+id/receiveAddressEt"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:fontFamily="@font/light"
+                android:hint="@string/receive_address"
+                android:inputType="text"
+                android:textColorHint="@color/hint" />
+
+
+            <Button
+                android:id="@+id/scanQRBtn"
+                style="?attr/materialIconButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                app:icon="@drawable/round_qr_code_scanner_24"
+                app:iconTint="?colorOnSurface" />
+
+            <Button
+                android:id="@+id/pasteBtn"
+                style="?attr/materialIconButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                app:icon="@drawable/round_content_paste_24"
+                app:iconTint="?colorOnSurface" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_rounded_gray"
+            android:gravity="center_vertical"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/logo" />
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:orientation="vertical">
+
+                <com.cottacush.android.currencyedittext.CurrencyEditText
+                    android:id="@+id/amountEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="0"
+                    app:localeTag="en-US"
+                    android:background="@null"
+                    android:fontFamily="@font/semibold"
+                    android:inputType="number"
+                    android:textColor="?android:textColorPrimary"
+                    android:textSize="32sp" />
+
+                <TextView
+                    android:id="@+id/amountEqualTw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:fontFamily="@font/medium"
+                    android:includeFontPadding="false"
+                    android:textSize="12sp" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/maxTw"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/light"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/max"
+                android:textSize="22sp" />
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:drawablePadding="5dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/regular"
+            android:padding="10dp"
+            android:text="Fees include: 10 NEXA"
+            app:drawableStartCompat="@drawable/round_local_gas_station_24"
+            app:drawableTint="?colorOnSurface" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/errorTw"
+        style="@style/ErrorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/invalid_words"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        tools:text="Error Text" />
+
+
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/sendBtnShimmer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="20dp"
+        app:shimmer_highlight_alpha="0.5"
+        app:shimmer_base_alpha="1"
+        app:shimmer_auto_start="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/sendBtn"
+            style="@style/ButtonRoundedStyle"
+            android:enabled="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/baseline_keyboard_double_arrow_right_24"
+            android:text="@string/slide_to_send" />
+
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

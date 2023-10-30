@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="?attr/colorSurface"
+    tools:context=".fragments.SwapFragment">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary"
+            app:navigationIcon="?homeAsUpIndicator"
+            app:navigationIconTint="@color/black"
+            app:title="@string/swap"
+            app:titleTextAppearance="@style/ToolbarText" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/semibold"
+        android:padding="10dp"
+        android:text="@string/swap_nexa"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/regular"
+        android:gravity="center"
+        android:text="@string/swap_nexa_desc"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_rounded_gray"
+            android:gravity="center_vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/logo" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/amountTw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:fontFamily="@font/semibold"
+                    android:includeFontPadding="false"
+                    android:inputType="number"
+                    android:text="1.00"
+                    android:textColor="?android:textColorPrimary"
+                    android:textSize="32sp" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/semibold"
+                android:text="@string/coin_symbol"
+                android:textColor="?android:textColorPrimary" />
+
+            <TextView
+                android:id="@+id/maxTw"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/light"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/max"
+                android:textSize="22sp" />
+
+
+        </LinearLayout>
+
+        <Button
+            style="?attr/materialIconButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary"
+            app:icon="@drawable/round_swap_horiz_24"
+            app:iconSize="32dp"
+            app:iconTint="@color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_rounded_gray"
+            android:gravity="center_vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:src="@drawable/tether_logo" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/convertAmountTw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:fontFamily="@font/semibold"
+                    android:includeFontPadding="false"
+                    android:inputType="number"
+                    android:text="1.00"
+                    android:textColor="?android:textColorPrimary"
+                    android:textSize="32sp" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/semibold"
+                android:text="USDT"
+                android:textColor="?android:textColorPrimary" />
+
+            <TextView
+                android:id="@+id/convertEqualityTw"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/light"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="$1.28"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="22sp" />
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:drawablePadding="5dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/regular"
+            android:padding="10dp"
+            android:text="Fees include: 10 NEXA"
+            app:drawableStartCompat="@drawable/round_local_gas_station_24"
+            app:drawableTint="?colorOnSurface" />
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/button"
+        style="@style/ButtonRoundedStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:drawableEnd="@drawable/baseline_keyboard_double_arrow_right_24"
+        android:text="@string/slide_to_swap"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
