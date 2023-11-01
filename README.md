@@ -5,6 +5,7 @@
 # Nexa Wallet
 
 A rich, native Android wallet app to store your Nexa's in one place.
+This project using nexa android kotlin lib: https://gitlab.com/nexa/libnexakotlin
 
 
 ## Features
@@ -12,9 +13,10 @@ A rich, native Android wallet app to store your Nexa's in one place.
 - Clean Dashboard
 - Create & Import BIP39 Wallet
 - Buy, Send, Receive NEXA
-- View Transactions
+- Wallet History
 - Light/dark mode
 - QR Code Scan & Read
+- TX And more..
 ## Screenshots
 
 ![App Screenshot](https://i.ibb.co/nC3qSRf/nexa-flow2.png)
